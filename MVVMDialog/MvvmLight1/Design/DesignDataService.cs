@@ -1,7 +1,7 @@
 ﻿using System;
-using MVVMDialog.Model;
+using MvvmLight1.Model;
 
-namespace MVVMDialog.Design
+namespace MvvmLight1.Design
 {
     public class DesignDataService : IDataService
     {

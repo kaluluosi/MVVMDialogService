@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MVVMDialog.Model
+namespace MvvmLight1.Model
 {
     public class DataService : IDataService
     {

@@ -1,0 +1,17 @@
+﻿<Window x:Class="MvvmLight1.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dlg="clr-namespace:GalaSoft.MvvmLight.Dialog;assembly=GalaSoft.MvvmLight.Dialog"
+        xmlns:ignore="http://www.ignore.com"
+        mc:Ignorable="d ignore"
+        dlg:ViewManager.Register="True"
+        DataContext="{Binding Path=Edit, Source={StaticResource Locator}}" Height="75.353" Width="338.845">
+
+    <Grid>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="153"/>
+        <Button Command="{Binding SubmitCmd}" Content="Submit" HorizontalAlignment="Left" Margin="175,10,0,0" VerticalAlignment="Top" Width="62"/>
+        <Button Command="{Binding ApplyCmd}" CommandParameter="{Binding ElementName=name,Path=Text}" Content="Apply" HorizontalAlignment="Left" Margin="252,9,0,0" VerticalAlignment="Top" Width="62"/>
+    </Grid>
+</Window>
