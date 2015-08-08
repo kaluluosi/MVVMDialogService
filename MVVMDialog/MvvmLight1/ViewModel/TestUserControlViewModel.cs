@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using Xceed.Wpf.AvalonDock;
 
 namespace MvvmLight1.ViewModel
 {
@@ -14,6 +15,7 @@ namespace MvvmLight1.ViewModel
         /// Initializes a new instance of the TestUserControlViewModel class.
         /// </summary>
         public TestUserControlViewModel() {
+            
         }
     }
 }

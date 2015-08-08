@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMDialog", "MVVMDialog\MVVMDialog.csproj", "{08FF438E-A2B2-43E4-9FDC-AF431469AF72}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaSoft.MvvmLight.Dialog", "GalaSoft.MvvmLight.Dialog\GalaSoft.MvvmLight.Dialog.csproj", "{A306D8D6-1801-439E-A5D7-FDE393273497}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmLight1", "MvvmLight1\MvvmLight1.csproj", "{7921962A-46B5-4CDA-9C8F-44B19D4C0952}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xceed.Wpf.AvalonDock.MVVM", "Xceed.Wpf.AvalonDock.MVVM\Xceed.Wpf.AvalonDock.MVVM.csproj", "{37AB8DDC-815B-4885-9907-C8A477A01E0D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{F26F8221-F7B7-4F5B-A262-DDAC29035DA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{08FF438E-A2B2-43E4-9FDC-AF431469AF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08FF438E-A2B2-43E4-9FDC-AF431469AF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08FF438E-A2B2-43E4-9FDC-AF431469AF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08FF438E-A2B2-43E4-9FDC-AF431469AF72}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A306D8D6-1801-439E-A5D7-FDE393273497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A306D8D6-1801-439E-A5D7-FDE393273497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A306D8D6-1801-439E-A5D7-FDE393273497}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +27,6 @@ Global
 		{37AB8DDC-815B-4885-9907-C8A477A01E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37AB8DDC-815B-4885-9907-C8A477A01E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37AB8DDC-815B-4885-9907-C8A477A01E0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F26F8221-F7B7-4F5B-A262-DDAC29035DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F26F8221-F7B7-4F5B-A262-DDAC29035DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F26F8221-F7B7-4F5B-A262-DDAC29035DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F26F8221-F7B7-4F5B-A262-DDAC29035DA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

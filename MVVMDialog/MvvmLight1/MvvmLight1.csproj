@@ -95,7 +95,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignDataService.cs" />
-    <Compile Include="Helper\DialogRigster.cs" />
+    <Compile Include="Init\DialogRigster.cs" />
     <Compile Include="DockView.xaml.cs">
       <DependentUpon>DockView.xaml</DependentUpon>
     </Compile>
@@ -107,7 +107,7 @@
     <Compile Include="Model\IDataService.cs" />
     <Compile Include="Service\ContectBook.cs" />
     <Compile Include="Service\Student.cs" />
-    <Compile Include="Helper\TemplateRigster.cs" />
+    <Compile Include="Init\TemplateRigster.cs" />
     <Compile Include="ViewModel\DockViewModel.cs" />
     <Compile Include="ViewModel\EditViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
