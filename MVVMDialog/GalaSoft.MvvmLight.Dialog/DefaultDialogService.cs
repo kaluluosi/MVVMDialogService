@@ -21,8 +21,38 @@ namespace GalaSoft.MvvmLight.Dialog
         /// </summary>
         /// <typeparam name="TViewModel"></typeparam>
         /// <typeparam name="TView"></typeparam>
-        public static void Register<TViewModel, TView>() {
+        public static void Register<TViewModel, TView>() where TViewModel : DialogViewModelBase {
             _customDialogFactory.Add(typeof(TViewModel), typeof(TView));
+        }
+
+        private Window CreatWindowByViewModel(DialogViewModelBase vm, ViewModelBase owner = null, bool setDataContext = false) {
+            Type vmType = vm.GetType();
+            Type winType = _customDialogFactory[vmType];
+            Window win = Activator.CreateInstance(winType) as Window;
+            //设置datacontext
+            if(setDataContext == true)
+                win.DataContext = vm;
+
+            //设置owner
+            if(owner != null) {
+                win.Owner = ViewManager.FindOwnerView(owner);
+            }
+
+            //监听dialogresult
+            vm.PropertyChanged += vm_Normal_PropertyChanged;
+
+            return win;
+        }
+
+        private Window CreateWindowByViewModelType<TViewModel>(ViewModelBase owner=null) where TViewModel:DialogViewModelBase {
+            Type vmType = typeof(TViewModel);
+            Type winType = _customDialogFactory[vmType];
+            Window win = Activator.CreateInstance(winType) as Window;
+
+            if(owner != null)
+                win.Owner = ViewManager.FindOwnerView(owner);
+
+            return win;
         }
 
         /// <summary>
@@ -30,31 +60,12 @@ namespace GalaSoft.MvvmLight.Dialog
         /// </summary>
         /// <param name="vm">通过vm实例来创建窗口</param>
         public bool? ShowDialog(DialogViewModelBase vm) {
-            try
-            {
-	            Type vmType = vm.GetType();
-	            Type winType = _customDialogFactory[vmType];
-	            Window win = Activator.CreateInstance(winType) as Window;
-	            win.DataContext = vm;
-	            //监听vm的propertychanged来监听DialogRsult的变化
-	            vm.PropertyChanged += vm_Model_DialogResultChanged;
-	            return win.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                throw ;
-            }
+            Window win = CreatWindowByViewModel(vm, setDataContext: true);
+            return win.ShowDialog();
         }
 
         public bool? ShowDialog(ViewModelBase owner, DialogViewModelBase vm) {
-            Type vmType = vm.GetType();
-            Type winType = _customDialogFactory[vmType];
-            Window win = Activator.CreateInstance(winType) as Window;
-            win.DataContext = vm;
-            //设置拥有这个对话框的窗口
-            win.Owner = ViewManager.FindOwnerView(owner);
-            //监听vm的propertychanged来监听DialogRsult的变化
-            vm.PropertyChanged +=vm_Model_DialogResultChanged;
+            Window win = CreatWindowByViewModel(vm, owner, true);
             return win.ShowDialog();
         }
 
@@ -64,46 +75,50 @@ namespace GalaSoft.MvvmLight.Dialog
         /// </summary>
         /// <param name="vm"></param>
         public void Show(DialogViewModelBase vm) {
-            Type vmType = vm.GetType();
-            Type winType = _customDialogFactory[vmType];
-            Window win = Activator.CreateInstance(winType) as Window;
-            win.DataContext = vm;
-            //监听vm的propertychanged来监听DialogRsult的变化
-            vm.PropertyChanged += vm_Normal_PropertyChanged;
-            win.ShowDialog();
+            Window win = CreatWindowByViewModel(vm,setDataContext:true);
+            win.Show();
         }
 
         public void Show(ViewModelBase owner, DialogViewModelBase vm) {
-            Type vmType = vm.GetType();
-            Type winType = _customDialogFactory[vmType];
-            Window win = Activator.CreateInstance(winType) as Window;
-            win.DataContext = vm;
-            win.Owner = ViewManager.FindOwnerView(owner);
-            //监听vm的propertychanged来监听DialogRsult的变化
-            vm.PropertyChanged += vm_Normal_PropertyChanged;
-            win.ShowDialog();
+            Window win = CreatWindowByViewModel(vm, owner, setDataContext: true);
+            win.Show();
         }
 
         private void vm_Normal_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e) {
-
             if(e.PropertyName == "DialogResult") {
                 DialogViewModelBase dvm = sender as DialogViewModelBase;
                 Window win = ViewManager.FindOwnerView(dvm);
                 if(dvm.DialogResult != null) {
+                    win.DialogResult = dvm.DialogResult;
                     win.Close();
                 }
             }
-
-        }
-       
-        void vm_Model_DialogResultChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e) {
-            if(e.PropertyName == "DialogResult") {
-                //当vm的dialogresult改变时，修改对应的view的dialogresult，实现关闭对话框
-                DialogViewModelBase dvm = sender as DialogViewModelBase;
-                Window win = ViewManager.FindOwnerView(dvm);
-                win.DialogResult = dvm.DialogResult;
-            }
         }
 
+
+        // 通过viewmodel类型打开但不为其设置datacontext
+        
+        /// <summary>
+        /// 打开非模态对话框
+        /// </summary>
+        /// <typeparam name="TViewModel"></typeparam>
+        /// <returns>返回View中绑定的DataContext的ViewModel</returns>
+        public TViewModel Show<TViewModel>() where TViewModel:DialogViewModelBase {
+            Window win = CreateWindowByViewModelType<TViewModel>();
+            win.Show();
+            return win.DataContext as TViewModel;
+        }
+
+        public TViewModel ShowDialog<TViewModel>() where TViewModel : DialogViewModelBase {
+            Window win = CreateWindowByViewModelType<TViewModel>();
+            win.ShowDialog();
+            return win.DataContext as TViewModel;
+        }
+
+        public TViewModel ShowDialog<TViewModel>(ViewModelBase owner) where TViewModel : DialogViewModelBase {
+            Window win = CreateWindowByViewModelType<TViewModel>(owner);
+            win.ShowDialog();
+            return win.DataContext as TViewModel;
+        }
     }
 }

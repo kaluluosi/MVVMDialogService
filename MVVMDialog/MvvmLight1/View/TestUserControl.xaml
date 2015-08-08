@@ -4,9 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             >
     <Grid>
-        <Label Content="HelloWorld" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" Height="62" Width="239"/>
+        <Label Content="{Binding DocContent}" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" Height="62" Width="239"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="104,156,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="139,243,0,0" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="10,190,0,0" VerticalAlignment="Top" Width="100"/>

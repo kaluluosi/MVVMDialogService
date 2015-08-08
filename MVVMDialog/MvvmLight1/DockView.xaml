@@ -5,19 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ignore="http://www.ignore.com"
         xmlns:avalon="http://schemas.xceed.com/wpf/xaml/avalondock"
-        xmlns:local="clr-namespace:MvvmLight1.View.PaneTemplate"
+        xmlns:local="clr-namespace:MvvmLight1.ViewModel"
         mc:Ignorable="d ignore"
-        DataContext="{Binding Source={StaticResource Locator},Path=DockView}"
+        DataContext="{Binding Source={StaticResource Locator},Path=Dock}"
         >
-    <Window.Resources>
-    <ResourceDictionary>
-            
-    </ResourceDictionary>
-    </Window.Resources>
+
     <Grid>
-        <avalon:DockingManager 
+        <avalon:DockingManager x:Name="dockingManager" 
             LayoutItemTemplateSelector="{Binding Source={StaticResource PaneMgr},Path=DefaultPanelsTemplateSelector}"
-            AnchorablesSource="{Binding Views}"               
+            AnchorablesSource="{Binding Views}"
+            DocumentsSource="{Binding Documents}"
+            ActiveContent="{Binding ActiveContent,Mode=TwoWay}"
             >
             <avalon:LayoutRoot>
                 

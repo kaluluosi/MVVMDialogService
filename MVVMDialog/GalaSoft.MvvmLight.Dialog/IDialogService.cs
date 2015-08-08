@@ -14,6 +14,9 @@ namespace GalaSoft.MvvmLight.Dialog
         bool? ShowDialog(DialogViewModelBase vm);
         bool? ShowDialog(ViewModelBase owner,DialogViewModelBase vm);
 
+        TViewModel Show<TViewModel>() where TViewModel : DialogViewModelBase;
+        TViewModel ShowDialog<TViewModel>() where TViewModel : DialogViewModelBase;
+        TViewModel ShowDialog<TViewModel>(ViewModelBase owner) where TViewModel : DialogViewModelBase;
 
     }
 }

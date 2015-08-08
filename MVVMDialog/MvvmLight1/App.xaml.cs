@@ -12,8 +12,8 @@ namespace MvvmLight1
         static App() {
             DispatcherHelper.Initialize();
 
-            new TemplateRigster();
-            new DialogRigster();
+//             new TemplateRigster();
+//             new DialogRigster();
         }
     }
 }

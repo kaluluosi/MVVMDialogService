@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MvvmLight1.ViewModel;
+using System.Windows;
 
 namespace MvvmLight1
 {
@@ -12,6 +13,8 @@ namespace MvvmLight1
         /// </summary>
         public DockView() {
             InitializeComponent();
+
         }
+
     }
 }

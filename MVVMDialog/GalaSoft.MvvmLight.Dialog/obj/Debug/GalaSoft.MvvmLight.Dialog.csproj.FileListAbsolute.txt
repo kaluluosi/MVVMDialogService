@@ -41,3 +41,4 @@ D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.D
 D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.csproj.GenerateResource.Cache
 D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.dll
 D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.csprojResolveAssemblyReference.cache

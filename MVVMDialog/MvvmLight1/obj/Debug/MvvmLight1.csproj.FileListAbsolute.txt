@@ -92,3 +92,7 @@ D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug
 D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\DockView.g.cs
 D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\View\TestUserControl.baml
 D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\View\TestUserControl.g.cs
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\bin\Debug\ICSharpCode.AvalonEdit.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\bin\Debug\ICSharpCode.AvalonEdit.xml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\View\DocumentView.baml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\View\DocumentView.g.cs

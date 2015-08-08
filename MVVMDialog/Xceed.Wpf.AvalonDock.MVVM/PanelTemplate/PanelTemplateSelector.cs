@@ -9,7 +9,7 @@ using System.Windows.Controls;
 
 namespace Xceed.Wpf.AvalonDock.MVVM.PanelTemplate
 {
-    public class PanelsTemplateSelector:DataTemplateSelector
+    public class PanelTemplateSelector:DataTemplateSelector
     {
         public override System.Windows.DataTemplate SelectTemplate(object item, System.Windows.DependencyObject container) {
             if(item is ViewModelBase) {

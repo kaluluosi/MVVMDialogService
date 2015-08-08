@@ -15,9 +15,7 @@ namespace Xceed.Wpf.AvalonDock.MVVM.PanelTemplate
 
         public static DataTemplateSelector DefaultPanelsTemplateSelector {
             get {
-                if(_defaultPanelsTemplateSelector == null)
-                    return _defaultPanelsTemplateSelector = new PanelsTemplateSelector();
-                return _defaultPanelsTemplateSelector;
+                return _defaultPanelsTemplateSelector ?? (_defaultPanelsTemplateSelector = new PanelTemplateSelector());
             }
         }
 

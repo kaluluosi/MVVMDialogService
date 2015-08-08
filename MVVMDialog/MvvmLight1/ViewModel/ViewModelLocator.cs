@@ -29,6 +29,8 @@ namespace MvvmLight1.ViewModel
     /// </summary>
     public class ViewModelLocator
     {
+
+
         static ViewModelLocator() {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
@@ -56,8 +58,9 @@ namespace MvvmLight1.ViewModel
 
             SimpleIoc.Default.Register<EditViewModel>(true);
 
-            SimpleIoc.Default.Register<DockViewModel>(() => new DockViewModel());
-
+            SimpleIoc.Default.Register<DockExViewModel>(()=> DockExViewModel.Instance);
+            SimpleIoc.Default.Register<TemplateRigster>(true);
+            SimpleIoc.Default.Register<DialogRigster>(true);
 
 //             PanelTemplateManager.Register<TestUserControlViewModel, TestUserControl>();
         }
@@ -80,12 +83,18 @@ namespace MvvmLight1.ViewModel
             }
         }
 
-        public DockViewModel DockView {
+        public DockExViewModel Dock {
             get {
-                return ServiceLocator.Current.GetInstance<DockViewModel>();
+                return ServiceLocator.Current.GetInstance<DockExViewModel>();
             }
         }
 
+//         public DockViewModel DockView {
+//             get {
+//                 return ServiceLocator.Current.GetInstance<DockViewModel>();
+//             }
+//         }
+// 
         /// <summary>
         /// Cleans up all the resources.
         /// </summary>

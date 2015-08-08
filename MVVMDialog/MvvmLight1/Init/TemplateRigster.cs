@@ -14,7 +14,7 @@ namespace MvvmLight1
         static TemplateRigster() {
 
             PanelTemplateManager.Register<TestUserControlViewModel, TestUserControl>();
-
+            PanelTemplateManager.Register<DocumentViewModel, DocumentView>();
         }
     }
 }
