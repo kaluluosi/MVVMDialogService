@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dengxuan\Documents\GitHub\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\obj\Debug\
 MvvmLight1
 none
 false
 CODE_ANALYSIS;DEBUG;TRACE
-C:\Users\dengxuan\Documents\GitHub\MVVMDialogService\MVVMDialog\MvvmLight1\App.xaml
-3-1856041217
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\MvvmLight1\App.xaml
+5657082450
 
-15648712332
-691815786726
-EditWindow.xaml;MainWindow.xaml;Skins\MainSkin.xaml;
+25612546865
+77756164663
+DockView.xaml;EditWindow.xaml;MainWindow.xaml;Skins\MainSkin.xaml;View\TestUserControl.xaml;
 
 False
 

@@ -20,3 +20,24 @@ C:\Users\dengxuan\Documents\GitHub\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLig
 C:\Users\dengxuan\Documents\GitHub\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.csproj.GenerateResource.Cache
 C:\Users\dengxuan\Documents\GitHub\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.dll
 C:\Users\dengxuan\Documents\GitHub\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Dialog.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Dialog.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Dialog.dll.CodeAnalysisLog.xml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Dialog.dll.lastcodeanalysissucceeded
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\System.Windows.Interactivity.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.xml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.Properties.Resources.resources
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.csproj.GenerateResource.Cache
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.dll
+D:\Visual Studio 2013\Projects\MVVMDialogService\MVVMDialog\GalaSoft.MvvmLight.Dialog\obj\Debug\GalaSoft.MvvmLight.Dialog.pdb

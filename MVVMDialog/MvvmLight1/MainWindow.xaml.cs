@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using MvvmLight1.ViewModel;
+using System.Windows.Input;
 
 namespace MvvmLight1
 {
@@ -14,6 +15,8 @@ namespace MvvmLight1
         public MainWindow() {
             InitializeComponent();
             Closing += (s, e) => ViewModelLocator.Cleanup();
+
+            
         }
     }
 }

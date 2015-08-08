@@ -15,6 +15,8 @@ using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using MvvmLight1.Model;
 using MvvmLight1.Service;
+using MvvmLight1.View;
+using MvvmLight1.View.PaneTemplate;
 
 namespace MvvmLight1.ViewModel
 {
@@ -54,7 +56,10 @@ namespace MvvmLight1.ViewModel
 
             SimpleIoc.Default.Register<EditViewModel>(true);
 
-            DefaultDialogService.Register<EditViewModel, EditWindow>();
+            SimpleIoc.Default.Register<DockViewModel>(() => new DockViewModel());
+
+
+//             PanelTemplateManager.Register<TestUserControlViewModel, TestUserControl>();
         }
 
         /// <summary>
@@ -72,6 +77,12 @@ namespace MvvmLight1.ViewModel
         public EditViewModel Edit {
             get {
                 return ServiceLocator.Current.GetInstance<EditViewModel>();
+            }
+        }
+
+        public DockViewModel DockView {
+            get {
+                return ServiceLocator.Current.GetInstance<DockViewModel>();
             }
         }
 

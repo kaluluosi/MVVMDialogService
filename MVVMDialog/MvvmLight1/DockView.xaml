@@ -1,0 +1,27 @@
+﻿<Window x:Class="MvvmLight1.DockView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.ignore.com"
+        xmlns:avalon="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:local="clr-namespace:MvvmLight1.View.PaneTemplate"
+        mc:Ignorable="d ignore"
+        DataContext="{Binding Source={StaticResource Locator},Path=DockView}"
+        >
+    <Window.Resources>
+    <ResourceDictionary>
+            
+    </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <avalon:DockingManager 
+            LayoutItemTemplateSelector="{Binding Source={StaticResource PaneMgr},Path=DefaultPanelsTemplateSelector}"
+            AnchorablesSource="{Binding Views}"               
+            >
+            <avalon:LayoutRoot>
+                
+            </avalon:LayoutRoot>
+        </avalon:DockingManager>
+    </Grid>
+</Window>

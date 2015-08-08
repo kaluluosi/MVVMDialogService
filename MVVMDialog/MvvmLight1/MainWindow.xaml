@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:dlg="clr-namespace:GalaSoft.MvvmLight.Dialog;assembly=GalaSoft.MvvmLight.Dialog"
+        xmlns:local="clr-namespace:MvvmLight1"
         xmlns:ignore="http://www.ignore.com"
         mc:Ignorable="d ignore"
         Height="824"
@@ -19,6 +20,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    
 
     <Grid x:Name="LayoutRoot">
 
@@ -30,6 +32,11 @@
                    TextWrapping="Wrap" Height="142" Margin="10,10,10,641" />
         <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="440" Margin="10,157,0,0" VerticalAlignment="Top" Width="603" ItemsSource="{Binding Students}" DisplayMemberPath="Name"/>
         <Button Command="{Binding EditCmd}" CommandParameter="{Binding ElementName=listbox,Path=SelectedItem}" Content="Edit" HorizontalAlignment="Left" Margin="10,615,0,0" VerticalAlignment="Top" Width="76"/>
+        <Menu HorizontalAlignment="Left" Height="28" Margin="10,741,0,0" VerticalAlignment="Top" Width="100">
+            <MenuItem Header="测试">
+                <MenuItem Header="dd"></MenuItem>
+            </MenuItem>
+        </Menu>
 
     </Grid>
 </Window>

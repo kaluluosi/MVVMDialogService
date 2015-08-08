@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Dialog;
 using System.Windows.Input;
+using System.Windows;
 
 namespace MvvmLight1.ViewModel
 {
@@ -77,11 +78,9 @@ namespace MvvmLight1.ViewModel
 
         }
 
+
         private bool canEdit(Student arg) {
-            if(arg!=null&&arg.Name == "Tom3")
-                return true;
-            else
-                return false;
+            return true;
         }
 
         private void edit(Student obj) {
@@ -90,6 +89,7 @@ namespace MvvmLight1.ViewModel
         }
 
 
+   
         ////public override void Cleanup()
         ////{
         ////    // Clean up if needed

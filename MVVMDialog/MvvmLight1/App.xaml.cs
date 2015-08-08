@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using GalaSoft.MvvmLight.Threading;
+using MvvmLight1.View.PaneTemplate;
 
 namespace MvvmLight1
 {
@@ -10,6 +11,9 @@ namespace MvvmLight1
     {
         static App() {
             DispatcherHelper.Initialize();
+
+            new TemplateRigster();
+            new DialogRigster();
         }
     }
 }

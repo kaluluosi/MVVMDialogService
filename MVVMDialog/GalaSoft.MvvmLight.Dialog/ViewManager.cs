@@ -15,9 +15,10 @@ namespace GalaSoft.MvvmLight.Dialog
     {
 
         /// <summary>
-        /// 
+        /// 所有被注册过的view实例
         /// </summary>
         private static HashSet<Window> _views = new HashSet<Window>();
+
 
         public static bool GetRegister(DependencyObject obj) {
             return (bool)obj.GetValue(RegisterProperty);
