@@ -21,9 +21,7 @@ namespace Xceed.Wpf.AvalonDock.MVVM.PanelTemplate
 
         private static Dictionary<Type, Type> _controlFacotry = new Dictionary<Type, Type>();
 
-        public static void Register<VMType, CtrlType>()
-            where VMType : ViewModelBase
-            where CtrlType : UserControl {
+        public static void Register<VMType, CtrlType>()  {
             Type vmType = typeof(VMType);
             Type ctrlType = typeof(CtrlType);
 

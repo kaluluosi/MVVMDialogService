@@ -19,7 +19,6 @@ namespace MvvmLight1.ViewModel
     {
         private readonly IDataService _dataService;
         private readonly ContactBook _contactBook;
-        private readonly IDialogService _dialogService;
 
         /// <summary>
         /// The <see cref="WelcomeTitle" /> property's name.
@@ -59,7 +58,7 @@ namespace MvvmLight1.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel(IDataService dataService,ContactBook cb,IDialogService dialogService) {
+        public MainViewModel(IDataService dataService,ContactBook cb) {
             _dataService = dataService;
             _dataService.GetData(
                 (item, error) => {
@@ -71,7 +70,6 @@ namespace MvvmLight1.ViewModel
                     WelcomeTitle = item.Title;
                 });
             _contactBook = cb;
-            _dialogService = dialogService;
             _students = cb.Students;
 
             EditCmd = new RelayCommand<Student>(edit, canEdit);
@@ -84,8 +82,11 @@ namespace MvvmLight1.ViewModel
         }
 
         private void edit(Student obj) {
-            EditViewModel editVM = new EditViewModel(obj);
-            _dialogService.ShowDialog(editVM);
+            //             EditViewModel editVM = new EditViewModel(obj);
+            //             _dialogService.ShowDialog(editVM);
+            EditViewModel editVM = ViewManager.Show<EditViewModel>();
+            editVM.Student = obj ;
+            editVM.Name = obj.Name;
         }
 
 

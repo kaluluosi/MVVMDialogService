@@ -44,9 +44,29 @@ namespace MvvmLight1.ViewModel
             private set;
         }
 
+        public RelayCommand<System.ComponentModel.CancelEventArgs> Closed {
+            get;
+            private set;
+        }
+
+        public Student Student {
+            get {
+                return _student;
+            }
+
+            set {
+                _student = value;
+            }
+        }
+
         [PreferredConstructor]
         public EditViewModel() {
             ApplyCmd = new RelayCommand<string>(apply, canApply);
+            Closed = new RelayCommand<System.ComponentModel.CancelEventArgs>(args => {
+                System.Windows.Forms.MessageBox.Show("haha");
+                args.Cancel = true; }
+            );
+            
         }
 
         private bool canApply(string arg) {

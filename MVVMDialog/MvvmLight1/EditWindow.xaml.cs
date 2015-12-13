@@ -13,5 +13,6 @@ namespace MvvmLight1
         public EditWindow() {
             InitializeComponent();
         }
+
     }
 }

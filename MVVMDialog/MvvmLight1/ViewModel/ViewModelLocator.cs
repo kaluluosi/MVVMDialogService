@@ -54,8 +54,6 @@ namespace MvvmLight1.ViewModel
                 return cb;
             });
 
-            SimpleIoc.Default.Register<IDialogService, DefaultDialogService>();
-
             SimpleIoc.Default.Register<EditViewModel>(true);
 
             SimpleIoc.Default.Register<DockExViewModel>(()=> DockExViewModel.Instance);

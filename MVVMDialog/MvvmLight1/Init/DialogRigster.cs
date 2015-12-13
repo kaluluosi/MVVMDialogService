@@ -11,7 +11,7 @@ namespace MvvmLight1
     {
         static DialogRigster() {
 
-            DefaultDialogService.Register<EditViewModel, EditWindow>();
+            ViewManager.Register<EditViewModel, EditWindow>();
 
         }
     }

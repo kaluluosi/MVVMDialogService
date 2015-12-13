@@ -4,14 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:dlg="clr-namespace:GalaSoft.MvvmLight.Dialog;assembly=GalaSoft.MvvmLight.Dialog"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        xmlns:i ="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:ignore="http://www.ignore.com"
         mc:Ignorable="d ignore"
         dlg:ViewManager.Register="True"
         DataContext="{Binding Path=Edit, Source={StaticResource Locator}}" Height="75.353" Width="338.845">
-
     <Grid>
         <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="153"/>
         <Button Command="{Binding SubmitCmd}" Content="Submit" HorizontalAlignment="Left" Margin="175,10,0,0" VerticalAlignment="Top" Width="62"/>
         <Button Command="{Binding ApplyCmd}" CommandParameter="{Binding ElementName=name,Path=Text}" Content="Apply" HorizontalAlignment="Left" Margin="252,9,0,0" VerticalAlignment="Top" Width="62"/>
     </Grid>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <cmd:EventToCommand Command="{Binding Closed}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
 </Window>

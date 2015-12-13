@@ -12,7 +12,14 @@ namespace GalaSoft.MvvmLight.Dialog
 
         public bool? DialogResult {
             get { return dialogResult; }
-            set { dialogResult = value; RaisePropertyChanged("DialogResult"); }
+            set { dialogResult = value; RaisePropertyChanged("DialogResult");OnDialogResultChanged(value); }
+        }
+
+        public event EventHandler<bool?> DialogResultChanged;
+        private void OnDialogResultChanged(bool? result) {
+            if (DialogResultChanged != null) {
+                DialogResultChanged(this, result);
+            }
         }
     }
 }
